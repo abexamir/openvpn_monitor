@@ -1,0 +1,12 @@
+[Unit]
+Description=OpenVPN Monitor
+
+[Service]
+User=root
+ExecStart=/bin/bash /root/ovpn.sh -f /root/abe.ovpn
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
+
